@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Add Product"
+            android:textColor="#293A24"
+            android:textSize="50sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_alignParentTop="true"
+                app:layout_constraintVertical_bias="0.13"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageButton"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext"
+                android:foregroundGravity="center"
+                android:hint="Name">
+
+
+                <EditText
+                    android:id="@+id/itemnameinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="?android:attr/colorBackground"
+                    android:gravity="center"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_name"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext"
+                android:foregroundGravity="center"
+                android:hint="Price">
+
+                <EditText
+                    android:id="@+id/itempriceinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="?android:attr/colorBackground"
+                    android:gravity="center"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_price"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="18dp"
+                android:gravity="center"
+                android:theme="@style/Widget.AppCompat.DropDownItem.Spinner" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_category"
+                android:layout_marginTop="42dp"
+                android:background="@drawable/button"
+                android:text="Submit" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

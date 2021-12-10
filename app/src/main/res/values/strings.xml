@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ECommerce Admin</string>
+    <string-array name="category">
+        <item>MOBILES</item>
+        <item>APPLIANCES</item>
+        <item>HOME</item>
+        <item>FASHION</item>
+        <item>PANTRY</item>
+        <item>ELECTRONICS</item>
+    </string-array>
+</resources>
